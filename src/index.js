@@ -11,7 +11,7 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById('root')
 );
-if ( window.location.href === "http://localhost:3000/" ){
+if ( window.location.href === "http://localhost:3000/" || window.location.href === "http://localhost:3001/" ){
     window.location.href = "/profile";
 }
 // If you want your app to work offline and load faster, you can change
