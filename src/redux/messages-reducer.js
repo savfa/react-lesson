@@ -1,8 +1,8 @@
 
 
 let initialState = {};
-let messagesReduser = (state = initialState, action) => {
+let messagesReducer = (state = initialState, action) => {
     return state
 }
 
-export default messagesReduser;
+export default messagesReducer;

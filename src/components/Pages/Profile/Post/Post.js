@@ -12,13 +12,12 @@ const Post = (props) => {
         )
     } );
 
-
     return (
         <React.Fragment>
             {postItem}
-            <textarea onChange={props.updateText} value={props.textArea} placeholder='Что у вас новенького?'></textarea>
+            <input type="text" onChange={props.updateTem} value={props.temPost} placeholder='Тема поста'/>
+            <textarea onChange={props.updateText} value={props.textArea} placeholder='Что у вас новенького?'/>
             <button className="addPost" onClick={props.addPost}>Опубликовать</button>
-            {console.dir(props)}
         </React.Fragment>
     )
 }

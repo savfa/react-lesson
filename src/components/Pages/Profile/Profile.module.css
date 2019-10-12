@@ -4,12 +4,9 @@
 .avatar {
     width: 330px;
     height: 300px !important;
-    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
 }
 .avatar_info {
     width: 100%;
