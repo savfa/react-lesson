@@ -1,0 +1,6 @@
+.myPosts {
+    flex-direction: column;
+}
+.postBody {
+    height: 50px;
+}

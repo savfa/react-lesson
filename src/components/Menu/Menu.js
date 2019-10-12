@@ -9,7 +9,7 @@ const Menu = (props) => {
             <li><NavLink to="#" className={style.a}>Сообщества</NavLink></li>
             <li><NavLink to="#" className={style.a}>Музыка</NavLink></li>
             <li><NavLink to="#" className={style.a}>Помощь</NavLink></li>
-            <li><NavLink to="#" className={style.a}>Вход</NavLink></li>
+            <li><NavLink to="/login" className={style.a}>Вход</NavLink></li>
         </ul>
     );
 }

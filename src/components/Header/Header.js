@@ -9,7 +9,7 @@ const Header = (props) => {
         <header className={`${style.header} flex align-items-center`}>
             <div className="container">
                 <div className="header__wrap d-flex">
-                    <NavLink to='/profile'><img className={`${style.logo}`} src={logo} /></NavLink>
+                    <NavLink to='/' className={`${style.link}`}><img className={`${style.logo}`} src={logo} alt="logo" /></NavLink>
                     <Menu/>
                 </div>
             </div>
