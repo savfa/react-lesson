@@ -10,7 +10,7 @@ const Header = (props) => {
             <div className="container">
                 <div className="header__wrap d-flex">
                     <NavLink to='/' className={`${style.link}`}><img className={`${style.logo}`} src={logo} alt="logo" /></NavLink>
-                    <Menu/>
+                    <Menu {...props}/>
                 </div>
             </div>
         </header>

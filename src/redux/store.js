@@ -3,10 +3,13 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import messagesReducer from "./messages-reducer";
 import profilePostReducer from "./profilePost-reducer";
 import { reducer as formReducer } from 'redux-form';
+import authReducer from "./auth-reduser";
+import thunk from "redux-thunk";
 
 let reducers = combineReducers({
     messagesPage: messagesReducer,
     profilePage: profilePostReducer,
+    auth: authReducer,
     form: formReducer
 });
 
@@ -16,7 +19,7 @@ let reducers = combineReducers({
 const store = createStore(reducers/!*, composeEnhancers((applyMiddleware(...middleware))*!/);*/
 
 const store = createStore(reducers, composeWithDevTools(
-    // applyMiddleware(...middleware),
+    applyMiddleware(thunk),
     // other store enhancers if any
 ));
 
