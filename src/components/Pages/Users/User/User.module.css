@@ -14,6 +14,7 @@
 }
 .photo {
     max-width: 100%;
+    border-radius: 50%;
 }.userInfo {
      padding: 20px 0 0 20px;
  }

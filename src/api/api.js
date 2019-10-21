@@ -9,11 +9,18 @@ const instance = axios.create({
 });
 
 export const authAPI = {
-    me () {
+    me() {
         return instance.get('auth/me');
     },
-    login (email, password, rememberMe) {
+    login(email, password, rememberMe) {
         return instance.post('auth/login', { email, password, rememberMe});
     }
 }
 
+export const usersAPI = {
+    getUsers(currentPage = 1, pageSize = 10) {
+        return instance.get(`users?page=${currentPage}&count=${pageSize}`).then(response => {
+            return response.data;
+        });
+    }
+}

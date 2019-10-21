@@ -5,11 +5,13 @@ import profilePostReducer from "./profilePost-reducer";
 import { reducer as formReducer } from 'redux-form';
 import authReducer from "./auth-reduser";
 import thunk from "redux-thunk";
+import usersReducer from "./users-reduser";
 
 let reducers = combineReducers({
     messagesPage: messagesReducer,
     profilePage: profilePostReducer,
     auth: authReducer,
+    usersPage: usersReducer,
     form: formReducer
 });
 
@@ -19,9 +21,11 @@ let reducers = combineReducers({
 const store = createStore(reducers/!*, composeEnhancers((applyMiddleware(...middleware))*!/);*/
 
 const store = createStore(reducers, composeWithDevTools(
-    applyMiddleware(thunk),
+    applyMiddleware(thunk)
     // other store enhancers if any
 ));
+
+
 
 // let store = createStore(reducers);
 export default store;
