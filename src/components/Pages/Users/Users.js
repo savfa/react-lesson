@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Users.module.css';
 import User from "./User/User";
+import Pagination from "../../../common/Pagination/Pagination";
 
 const Users = (props) => {
     let userItem = props.users.map(user => {
@@ -8,10 +9,10 @@ const Users = (props) => {
     })
     return (
         <section className={styles.users}>
-            <button onClick={()=>{props.handleGetUsers(props.page)}}> еще >> </button>
+            <Pagination {...props} />
             {userItem}
-</section>
-);
+        </section>
+    );
 }
 
 export default Users;
